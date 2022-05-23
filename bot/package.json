@@ -1,0 +1,32 @@
+{
+  "name": "mypersonalbot",
+  "version": "1.0.0",
+  "description": "building my own bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx tsc && node build/bot.js",
+    "dev": "npx tsc && nodemon build/bot.js"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "grammy": "^1.3.3",
+    "request": "^2.65.0",
+    "tslib": "^2.3.1"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.1",
+    "@types/node": "^16.10.3",
+    "nodemon": "^2.0.6",
+    "typescript": "^4.4.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Serah73/MyPersonalBot.git"
+  },
+  "author": "Jose Ramon Rodriguez Hernandez <joserrh97@gmail.com> (https://github.com/serah73)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Serah73/MyPersonalBot/issues"
+  },
+  "homepage": "https://github.com/Serah73/MyPersonalBot#readme"
+}
