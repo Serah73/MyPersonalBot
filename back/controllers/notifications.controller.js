@@ -5,19 +5,17 @@ const jwt = require('jsonwebtoken');
 const { Notifications, User } = require('../models/notifications.model');
 const { SIGNIN, LOGIN, LOGOUT } = require('../actions/user.action');
 
-async function userController(socket, message) {
-  const body = JSON.parse(message);
+async function userController(socket, body) {
+  console.log("User started")
 
   if(body.type == SIGNIN){
     console.log("singin: ", body)
     return await signin(socket, body);
-  } 
-    
-  
-  if(body.type == LOGIN)
+  }
+  else if(body.type == LOGIN)
     return await login(socket, body);
-
-  return socket.send(JSON.stringify({ code: 400, status: 'error', message: 'Action not found' }));
+  else
+    return socket.send(JSON.stringify({ code: 400, status: 'error', message: 'Action not found' }));
 }
 
 async function signin(socket, body){
