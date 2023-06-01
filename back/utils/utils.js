@@ -16,6 +16,7 @@ async function checkExist(name){
         return !!err;
     })
 }
+
 const createFileDir = async (name, data) => {
     let fileExist = await checkExist()
     if (fileExist) return false

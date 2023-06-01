@@ -3,7 +3,7 @@
 const jwt = require('jsonwebtoken');
 
 const { Notifications } = require('../models/notifications.model');
-
+const LOCATION = "Notifications.Controller";
 
 async function preloadUser(socket) {
   const fetchUsers = await User.find();
